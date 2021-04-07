@@ -15,7 +15,7 @@ from django.views.decorators.csrf import csrf_exempt
 def handle_build(request):
 
 	r = requests.get('https://circleci.com/api/v2/pipeline?org-slug=gh/USCRPL',
-				 	auth=('a507bc77f71483178f95fa5b3d39aac1f3bd85', ''))
+				 	auth=('a507bc77f71483178f7gjh55b3d39aac1f3bd85', ''))
 
 
 	if len(r.json()['items'][0]['errors']) == 0:  # if len() == 0, no error, successful build
